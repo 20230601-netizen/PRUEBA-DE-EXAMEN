@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+
+<html class="h-full bg-background" lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-secondary": "#ffffff", "error-container": "#ffdad6", "on-background": "#131b2e", "surface-bright": "#faf8ff", "on-tertiary-container": "#fcfcff", "secondary": "#b90538", "on-tertiary-fixed-variant": "#004c6e", "secondary-container": "#dc2c4f", "tertiary-container": "#007cb1", "on-error": "#ffffff", "on-tertiary": "#ffffff", "surface-tint": "#494bd6", "primary-fixed-dim": "#c0c1ff", "surface-container-high": "#e2e7ff", "on-tertiary-fixed": "#001e2f", "on-surface-variant": "#464554", "on-primary-fixed-variant": "#2f2ebe", "surface-container-lowest": "#ffffff", "surface": "#faf8ff", "on-primary": "#ffffff", "on-surface": "#131b2e", "inverse-surface": "#283044", "surface-container-low": "#f2f3ff", "on-error-container": "#93000a", "secondary-fixed-dim": "#ffb2b7", "surface-variant": "#dae2fd", "tertiary-fixed": "#c9e6ff", "secondary-fixed": "#ffdadb", "on-primary-container": "#fffbff", "surface-container-highest": "#dae2fd", "on-secondary-container": "#fffbff", "on-primary-fixed": "#07006c", "tertiary": "#00628d", "primary": "#4648d4", "surface-container": "#eaedff", "outline-variant": "#c7c4d7", "tertiary-fixed-dim": "#89ceff", "primary-container": "#6063ee", "inverse-on-surface": "#eef0ff", "on-secondary-fixed": "#40000d", "error": "#ba1a1a", "background": "#faf8ff", "primary-fixed": "#e1e0ff", "inverse-primary": "#c0c1ff", "outline": "#767586", "surface-dim": "#d2d9f4", "on-secondary-fixed-variant": "#92002a" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-xl": "2rem", "space-sm": "0.5rem", "gutter": "1rem", "space-lg": "1.5rem", "space-md": "1rem", "space-xs": "0.25rem", "margin": "1.25rem" }, fontFamily: { "code-sm": ["JetBrains Mono"], "headline-lg": ["Inter"], "code-lg": ["JetBrains Mono"], "headline-lg-mobile": ["Inter"], "body-sm": ["Inter"], "title-sm": ["Inter"], "headline-md": ["Inter"], "body-md": ["Inter"], "label-xs": ["Inter"] }, fontSize: { "code-sm": ["12px", { lineHeight: "16px", letterSpacing: "0.02em", fontWeight: "500" }], "headline-lg": ["32px", { lineHeight: "40px", letterSpacing: "-0.03em", fontWeight: "600" }], "code-lg": ["15px", { lineHeight: "20px", letterSpacing: "-0.01em", fontWeight: "500" }], "headline-lg-mobile": ["26px", { lineHeight: "32px", letterSpacing: "-0.025em", fontWeight: "600" }], "body-sm": ["13px", { lineHeight: "18px", letterSpacing: "0em", fontWeight: "400" }], "title-sm": ["15px", { lineHeight: "22px", letterSpacing: "-0.01em", fontWeight: "500" }], "headline-md": ["20px", { lineHeight: "28px", letterSpacing: "-0.02em", fontWeight: "600" }], "body-md": ["14px", { lineHeight: "20px", letterSpacing: "0em", fontWeight: "400" }], "label-xs": ["11px", { lineHeight: "14px", letterSpacing: "0.05em", fontWeight: "600" }] } } } };</script><style>@layer base{html,body{width:100%;margin:0;padding:0;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="min-h-full bg-background text-on-surface antialiased flex flex-col justify-between selection:bg-primary/20"><header class="fixed top-0 inset-x-0 z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.03)]"><div class="h-14 max-w-[480px] mx-auto px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-primary"><span class="material-symbols-outlined text-[20px]">palette</span></div><h1 class="font-headline-md text-headline-md tracking-tight text-on-surface">Selector de Color</h1></div><div class="flex items-center gap-space-xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 w-full max-w-[480px] mx-auto px-margin pt-14 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full gap-space-lg select-none">
+<!-- Encabezado introductorio -->
+<div class="flex flex-col gap-space-xs text-left">
+<div class="inline-flex items-center gap-space-xs self-start px-space-sm py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-xs text-label-xs tracking-wider uppercase">
+<span class="material-symbols-outlined text-[14px] text-primary">auto_awesome</span>
+      Paleta Esencial
+    </div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile tracking-tight text-on-surface">Elige tu color favorito</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Toca una de las 5 opciones para seleccionarlo y copiar su código con un solo toque.</p>
+</div>
+<!-- Hero Card / Live Preview Card -->
+<div class="relative w-full overflow-hidden rounded-xl bg-surface-container-lowest shadow-sm p-space-md flex flex-col gap-space-md transition-all duration-300">
+<!-- Fondo decorativo dinámico y orbe de luz -->
+<div class="absolute -top-12 -right-12 w-44 h-44 rounded-full opacity-20 blur-2xl pointer-events-none transition-all duration-500" id="previewGlow" style="background-color: #6366F1;"></div>
+<!-- Muestra visual dinámica principal -->
+<div class="relative w-full h-44 rounded-lg flex flex-col justify-between p-space-md shadow-sm transition-all duration-500 overflow-hidden" id="previewCanvas" style="background: linear-gradient(145deg, #6366F1, #4f46e5); color: #ffffff;">
+<!-- Barra superior de metadatos dentro del canvas -->
+<div class="flex items-center justify-between w-full">
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded-full bg-surface-container-lowest/25 backdrop-blur-md text-on-primary font-label-xs text-label-xs" id="contrastBadge">
+<span class="material-symbols-outlined text-[13px]">contrast</span>
+          Texto claro sugerido
+        </span>
+<span class="font-code-sm text-code-sm text-on-primary/80 uppercase">Espacio sRGB</span>
+</div>
+<!-- Nombre y tonalidad del color -->
+<div class="flex flex-col gap-0.5">
+<span class="font-label-xs text-label-xs tracking-widest uppercase text-on-primary/80" id="swatchSubtitle">Tono Seleccionado</span>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile tracking-tight text-on-primary" id="swatchTitle">Índigo Vibrante</h3>
+</div>
+</div>
+<!-- Detalle de valores y botón copiar rápido -->
+<div class="flex items-center justify-between gap-space-sm pt-space-xs">
+<div class="flex flex-col min-w-0">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase">HEX</span>
+<span class="font-code-lg text-code-lg text-on-surface font-semibold tracking-tight" id="hexValue">#6366F1</span>
+</div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase">RGB</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant" id="rgbValue">99, 102, 241</span>
+</div>
+</div>
+<!-- Botón de copiado interactivo con feedback -->
+<button class="relative inline-flex items-center justify-center gap-space-xs h-10 px-space-md rounded-full bg-surface-container active:scale-95 text-on-surface hover:bg-surface-container-high transition-all" id="copyHexBtn" type="button">
+<span class="material-symbols-outlined text-[18px]" id="copyIcon">content_copy</span>
+<span class="font-title-sm text-title-sm" id="copyLabel">Copiar HEX</span>
+</button>
+</div>
+</div>
+<!-- Selector interactivo de 5 colores -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-title-sm text-title-sm text-on-surface">Paleta curada</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">5 tonos disponibles</span>
+</div>
+<div aria-label="Selección de 5 colores" class="grid grid-cols-5 gap-space-xs w-full" role="radiogroup">
+<!-- Opción 1: Índigo -->
+<button aria-checked="true" class="color-pill group flex flex-col items-center gap-space-xs p-1.5 rounded-xl bg-surface-container-high transition-all active:scale-95" data-index="0" role="radio" title="Índigo Vibrante" type="button">
+<span class="w-11 h-11 rounded-full shadow-sm flex items-center justify-center transition-transform group-hover:scale-105" style="background-color: #6366F1;">
+<span class="check-icon material-symbols-outlined text-[20px] text-white">check</span>
+</span>
+<span class="font-code-sm text-[10px] leading-3 text-on-surface font-medium truncate w-full text-center">#6366F1</span>
+</button>
+<!-- Opción 2: Coral -->
+<button aria-checked="false" class="color-pill group flex flex-col items-center gap-space-xs p-1.5 rounded-xl bg-surface-container-lowest hover:bg-surface-container transition-all active:scale-95" data-index="1" role="radio" title="Rosa Coral" type="button">
+<span class="w-11 h-11 rounded-full shadow-sm flex items-center justify-center transition-transform group-hover:scale-105" style="background-color: #F43F5E;">
+<span class="check-icon hidden material-symbols-outlined text-[20px] text-white">check</span>
+</span>
+<span class="font-code-sm text-[10px] leading-3 text-on-surface-variant truncate w-full text-center">#F43F5E</span>
+</button>
+<!-- Opción 3: Azul Océano -->
+<button aria-checked="false" class="color-pill group flex flex-col items-center gap-space-xs p-1.5 rounded-xl bg-surface-container-lowest hover:bg-surface-container transition-all active:scale-95" data-index="2" role="radio" title="Azul Cielo" type="button">
+<span class="w-11 h-11 rounded-full shadow-sm flex items-center justify-center transition-transform group-hover:scale-105" style="background-color: #0EA5E9;">
+<span class="check-icon hidden material-symbols-outlined text-[20px] text-white">check</span>
+</span>
+<span class="font-code-sm text-[10px] leading-3 text-on-surface-variant truncate w-full text-center">#0EA5E9</span>
+</button>
+<!-- Opción 4: Verde Esmeralda -->
+<button aria-checked="false" class="color-pill group flex flex-col items-center gap-space-xs p-1.5 rounded-xl bg-surface-container-lowest hover:bg-surface-container transition-all active:scale-95" data-index="3" role="radio" title="Verde Menta" type="button">
+<span class="w-11 h-11 rounded-full shadow-sm flex items-center justify-center transition-transform group-hover:scale-105" style="background-color: #10B981;">
+<span class="check-icon hidden material-symbols-outlined text-[20px] text-white">check</span>
+</span>
+<span class="font-code-sm text-[10px] leading-3 text-on-surface-variant truncate w-full text-center">#10B981</span>
+</button>
+<!-- Opción 5: Ámbar -->
+<button aria-checked="false" class="color-pill group flex flex-col items-center gap-space-xs p-1.5 rounded-xl bg-surface-container-lowest hover:bg-surface-container transition-all active:scale-95" data-index="4" role="radio" title="Ámbar Cálido" type="button">
+<span class="w-11 h-11 rounded-full shadow-sm flex items-center justify-center transition-transform group-hover:scale-105" style="background-color: #F59E0B;">
+<span class="check-icon hidden material-symbols-outlined text-[20px] text-white">check</span>
+</span>
+<span class="font-code-sm text-[10px] leading-3 text-on-surface-variant truncate w-full text-center">#F59E0B</span>
+</button>
+</div>
+</div>
+<!-- Mini tarjeta de contexto de accesibilidad y armonía -->
+<div class="flex items-center gap-space-sm p-space-md rounded-xl bg-surface-container-low text-on-surface">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[20px]">verified</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm font-semibold">Listo para producción</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Cumple con ratio WCAG AA para interfaces limpias y componentes destacados.</span>
+</div>
+</div>
+<!-- Barra de acciones al pie del contenido -->
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<button class="w-full h-12 rounded-full bg-primary text-on-primary font-title-sm text-title-sm font-medium flex items-center justify-center gap-space-xs shadow-md active:scale-[0.98] transition-all" id="applyBtn" type="button">
+<span class="material-symbols-outlined text-[20px]">palette</span>
+<span>Aplicar Color Seleccionado</span>
+</button>
+<div class="opacity-0 translate-y-1 transition-all duration-200 text-center font-label-xs text-label-xs text-primary font-medium py-1" id="toastMessage">
+      ¡Código copiado al portapapeles!
+    </div>
+</div>
+</div>
+<script>
+  (function () {
+    const colors = [
+      {
+        name: 'Índigo Vibrante',
+        hex: '#6366F1',
+        rgb: '99, 102, 241',
+        gradient: 'linear-gradient(145deg, #6366F1, #4338ca)',
+        textColor: '#ffffff',
+        contrastText: 'Texto claro sugerido'
+      },
+      {
+        name: 'Rosa Coral',
+        hex: '#F43F5E',
+        rgb: '244, 63, 94',
+        gradient: 'linear-gradient(145deg, #F43F5E, #be123c)',
+        textColor: '#ffffff',
+        contrastText: 'Texto claro sugerido'
+      },
+      {
+        name: 'Azul Cielo',
+        hex: '#0EA5E9',
+        rgb: '14, 165, 233',
+        gradient: 'linear-gradient(145deg, #0EA5E9, #0369a1)',
+        textColor: '#ffffff',
+        contrastText: 'Texto claro sugerido'
+      },
+      {
+        name: 'Verde Menta',
+        hex: '#10B981',
+        rgb: '16, 185, 129',
+        gradient: 'linear-gradient(145deg, #10B981, #047857)',
+        textColor: '#ffffff',
+        contrastText: 'Texto claro sugerido'
+      },
+      {
+        name: 'Ámbar Cálido',
+        hex: '#F59E0B',
+        rgb: '245, 158, 11',
+        gradient: 'linear-gradient(145deg, #F59E0B, #b45309)',
+        textColor: '#ffffff',
+        contrastText: 'Texto claro sugerido'
+      }
+    ];
+
+    let currentIndex = 0;
+
+    const previewCanvas = document.getElementById('previewCanvas');
+    const previewGlow = document.getElementById('previewGlow');
+    const swatchTitle = document.getElementById('swatchTitle');
+    const hexValue = document.getElementById('hexValue');
+    const rgbValue = document.getElementById('rgbValue');
+    const contrastBadge = document.getElementById('contrastBadge');
+    const copyHexBtn = document.getElementById('copyHexBtn');
+    const copyIcon = document.getElementById('copyIcon');
+    const copyLabel = document.getElementById('copyLabel');
+    const applyBtn = document.getElementById('applyBtn');
+    const toast = document.getElementById('toastMessage');
+    const pills = document.querySelectorAll('.color-pill');
+
+    function selectColor(index) {
+      currentIndex = index;
+      const data = colors[index];
+
+      // Actualizar tarjeta de previsualización
+      previewCanvas.style.background = data.gradient;
+      previewGlow.style.backgroundColor = data.hex;
+      swatchTitle.textContent = data.name;
+      hexValue.textContent = data.hex;
+      rgbValue.textContent = data.rgb;
+      contrastBadge.lastChild.textContent = ' ' + data.contrastText;
+
+      // Actualizar estilos de los botones/pastillas
+      pills.forEach((pill, i) => {
+        const isSelected = i === index;
+        pill.setAttribute('aria-checked', isSelected ? 'true' : 'false');
+        const check = pill.querySelector('.check-icon');
+        const codeText = pill.querySelector('span:last-child');
+
+        if (isSelected) {
+          pill.classList.remove('bg-surface-container-lowest');
+          pill.classList.add('bg-surface-container-high');
+          check.classList.remove('hidden');
+          codeText.classList.remove('text-on-surface-variant');
+          codeText.classList.add('text-on-surface', 'font-semibold');
+        } else {
+          pill.classList.remove('bg-surface-container-high');
+          pill.classList.add('bg-surface-container-lowest');
+          check.classList.add('hidden');
+          codeText.classList.add('text-on-surface-variant');
+          codeText.classList.remove('text-on-surface', 'font-semibold');
+        }
+      });
+    }
+
+    function triggerCopyFeedback(message) {
+      const activeHex = colors[currentIndex].hex;
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(activeHex).catch(() => {});
+      }
+
+      copyIcon.textContent = 'check';
+      copyLabel.textContent = '¡Copiado!';
+      copyHexBtn.classList.add('bg-primary-fixed', 'text-on-primary-fixed');
+
+      toast.textContent = message || `Código ${activeHex} copiado con éxito`;
+      toast.classList.remove('opacity-0', 'translate-y-1');
+      toast.classList.add('opacity-100', 'translate-y-0');
+
+      setTimeout(() => {
+        copyIcon.textContent = 'content_copy';
+        copyLabel.textContent = 'Copiar HEX';
+        copyHexBtn.classList.remove('bg-primary-fixed', 'text-on-primary-fixed');
+        toast.classList.add('opacity-0', 'translate-y-1');
+        toast.classList.remove('opacity-100', 'translate-y-0');
+      }, 2000);
+    }
+
+    pills.forEach((pill) => {
+      pill.addEventListener('click', () => {
+        const idx = parseInt(pill.getAttribute('data-index'), 10);
+        selectColor(idx);
+      });
+    });
+
+    copyHexBtn.addEventListener('click', () => {
+      triggerCopyFeedback(`¡Hexadecimal ${colors[currentIndex].hex} copiado!`);
+    });
+
+    applyBtn.addEventListener('click', () => {
+      triggerCopyFeedback(`¡${colors[currentIndex].name} aplicado correctamente!`);
+    });
+  })();
+</script></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface/85 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.03)]" data-active-classes="text-primary font-title-sm"><div class="max-w-[480px] mx-auto flex justify-around items-center h-16 px-gutter"><a aria-current="page" class="flex flex-col items-center justify-center gap-space-xs min-w-[56px] min-h-[44px] transition-colors text-primary font-title-sm" data-path="selector" href="#"><span class="material-symbols-outlined text-[24px]">colorize</span><span class="font-label-xs text-label-xs">Selector</span></a><a class="flex flex-col items-center justify-center gap-space-xs min-w-[56px] min-h-[44px] text-on-surface-variant transition-colors hover:text-on-surface" data-path="paletas" href="#"><span class="material-symbols-outlined text-[24px]">format_paint</span><span class="font-label-xs text-label-xs">Paletas</span></a><a class="flex flex-col items-center justify-center gap-space-xs min-w-[56px] min-h-[44px] text-on-surface-variant transition-colors hover:text-on-surface" data-path="guardados" href="#"><span class="material-symbols-outlined text-[24px]">bookmarks</span><span class="font-label-xs text-label-xs">Guardados</span></a><a class="flex flex-col items-center justify-center gap-space-xs min-w-[56px] min-h-[44px] text-on-surface-variant transition-colors hover:text-on-surface" data-path="ajustes" href="#"><span class="material-symbols-outlined text-[24px]">tune</span><span class="font-label-xs text-label-xs">Ajustes</span></a></div></nav></body></html>
